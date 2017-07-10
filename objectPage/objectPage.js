@@ -1,49 +1,33 @@
-/**************************************
-FILENAME:
-AUTHOR:
-PURPOSE:
-CREATED:
-MODIFIED:
-NOTES:
-					Add fail safe js and css local libs
-*************************************/
+// HOME page object ====================================
+var homePage = {
+	title : 'Home Page',
+	heading : 'Home Page',
+	body : 'Page Body...'
+} // end Home Page Object
+
+
+
 
 $(document).ready(function(){
+	// wait until DOM has finished loade the document fully
 
-	// function to write to page for each object
-	function writeContent (objectName,headerContent,bodyContent,footerContent) {
-		this.objectName = objectName;
-		this.headerContent = headerContent;
-		this.bodyContent = bodyContent;
-		this.footerContent = footerContent;
-		// body...
+	$('title').replaceWith(
+		`<title>`
+		+ homePage.title
+		+`</title>`);
 
-		$('title').append(objectName);
-		$('header').append('<div class="container lead">' + headerContent + "</div><br>");
-		$('body').append('<br><div class="container text-muted">' + bodyContent + "</div><br>");
-		$('footer').append('<div class="container">' + footerContent + "</div><br>");
+	$('body').append(
 
-	} // end make object
+		`<div class="container">`
+		+ `<h1>`
+		+ homePage.heading
+		+ `</h1>`
+		+ `</div><br>`);
 
-
-
-
-
-
-	// test harness
-/*
-	var argumentArg = "Hello Test Argument!";
-	var objectNameArg = "Hello Object Title!";
-	var headerContentArg = "Hello Header Content String";
-	var bodyContentArg = "Hello Body Content String!";
-	var footerContentArg = "Hello Footer Content String";
-*/
-	// create object from constructor
-	//var funObject = makePage(objectNameArg,headerContentArg, bodyContentArg, footerContentArg);
-
-
-
- // Defaults per page
+	$('body').append(
+		`<div class="container">`
+		+ homePage.body
+		+ `</div><br>`);
 
 
 
@@ -51,23 +35,6 @@ $(document).ready(function(){
 
 
 
-
-
-
-
-
-	// HOME page object ====================================
-	var homeObject = {
-		objectNameArg : 'Home Page',
-		headerContentArg : 'Hello Home Page',
-		bodyContentArg : 'Hello Home Page Body Content',
-		footerContentArg : 'Hello Home Page Footer Content',
-		setPage: function(objectNameArg,headerContentArg, bodyContentArg, footerContentArg) {
-			writeContent(this.objectNameArg,this.headerContentArg, this.bodyContentArg, this.footerContentArg);
-		} // end make Home method
-	} // end Home Page Object
-
-	homeObject.setPage(); // make it happen, else nothing
 
 
 
