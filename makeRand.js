@@ -1,3 +1,5 @@
+// simple javascript randomize function
+
 function makeHashKey(text) {
   var text = "";
   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
